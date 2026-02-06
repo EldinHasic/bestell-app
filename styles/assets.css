@@ -1,7 +1,7 @@
 .atfImage {
-   width: 1440px;
-   height: 500px;
-   object-fit: cover;
+    width: 1440px;
+    height: 500px;
+    object-fit: cover;
 }
 
 .burgerLogo {
@@ -9,4 +9,28 @@
     height: 200px;
     width: 200px;
     padding: 24px;
+}
+
+/*Dish Container*/
+.dishContainer {
+    color: #363534;
+    background-color: #FDEADC;
+    padding: 12px;
+    border-radius: 12px;
+    height: 150px;
+    width: 400px;
+}
+
+.dishTitleAndPrice {
+    display: flex;
+    font-weight: bold;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24x;
+}
+
+.addToBasketButtons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
 }

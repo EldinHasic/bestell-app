@@ -16,6 +16,16 @@ main {
    flex: 1;
 }
 
+h1 {
+  
+   padding: 12px;
+}
+
+h2 {
+    color: #363534;
+    font-size: 36px;
+}
+
 .contentLimit {
    max-width: 1440px;
    margin: 0 auto;
@@ -33,6 +43,7 @@ header {
    align-items: center;
 }
 
+/*Home*/
 .mainStart {
    display: flex;
    flex-direction: column;
@@ -45,7 +56,7 @@ header {
    gap: 24px;
 }
 
-h2 {
-    color: #363534;
-    font-size: 36px;
+.MenuHeading {
+    background-color: #E76C1F;
+    margin-bottom: 36px;
 }
