@@ -18,7 +18,18 @@
     padding: 12px;
     border-radius: 12px;
     height: 150px;
-    width: 400px;
+    width: 650px;
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+
+}
+
+.dish-img {
+    height: 150px;
+    width: 250px;
+    object-fit: cover;
+    border-radius: 12px;
 }
 
 .dishTitleAndPrice {

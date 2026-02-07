@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'raleway';
-    src: url('/fonts/PalanquinDark-Regular.ttf') format('truetype');
+    src: url('/assets/fonts/PalanquinDark-Regular.ttf') format('truetype');
 }
 
 body {
@@ -26,10 +26,19 @@ h2 {
     font-size: 36px;
 }
 
+h3 {
+margin: 0;
+}
+
+p {
+   margin: 12px;
+}
+
 .contentLimit {
    max-width: 1440px;
    margin: 0 auto;
 }
+
 
 /*header*/
 header {

@@ -1,45 +1,47 @@
 let MyMenu = {
-  Pizza: [
+  "Burger": [
     {
-      name: "Margherita",
-      price: 8.50,
-      description: "Klassische Pizza mit Tomatensauce, Mozzarella und Basilikum"
+      "name": "Veggie mushroom black burger",
+      "price": 16.90,
+      "ingredients": "Mixed green salad, Tomatoes, Edamame, Mushrooms"
     },
     {
-      name: "Salami",
-      price: 9.50,
-      description: "Pizza mit würziger Salami und Mozzarella"
+      "name": "All meat burger",
+      "price": 15.90,
+      "ingredients": "Beef, Bacon, Dill, pickels, Smoked cheese, Ketchup, BBQ sauce"
     },
     {
-      name: "Funghi",
-      price: 9.00,
-      description: "Pizza mit frischen Champignons und Mozzarella"
+      "name": "Beef red burger",
+      "price": 14.90,
+      "ingredients": "Beef, Cheese, Tomatoes, Lettuce, Onion"
+    },
+    {
+      "name": "Big chicken burger",
+      "price": 15.90,
+      "ingredients": "Chicken, Cheese, Tomatoes, Lettuce, Onion, Bell peeper"
     }
   ],
 
-  Salate: [
+  "Pizza": [
     {
-      name: "Caesar Salad",
-      price: 7.50,
-      description: "Römersalat mit Caesar-Dressing, Croutons und Parmesan"
+      "name": "Pizza Margherita",
+      "price": 11.90,
+      "ingredients": "Tomato Sauce, Mozzarella"
     },
     {
-      name: "Griechischer Salat",
-      price: 7.00,
-      description: "Tomaten, Gurken, Oliven, Feta und Olivenöl"
+      "name": "Pizza Chorizo",
+      "price": 13.90,
+      "ingredients": "Tomato slices, Mozzarella, Chorizo"
+    },
+    {
+      "name": "Funghi",
+      "price": 12.90,
+      "ingredients": "Red onion, Olives, Button Mushrooms, Mozzarella"
+    },
+    {
+      "name": "Quattro Formaggi with Chicken",
+      "price": 15.90,
+      "ingredients": "Chicken, Mozzarella, Gorgonzola, Fontina, Parmigiano Reggiano"
     }
   ],
-
-  Desserts: [
-    {
-      name: "Tiramisu",
-      price: 4.50,
-      description: "Klassisches italienisches Dessert mit Mascarpone"
-    },
-    {
-      name: "Panna Cotta",
-      price: 4.00,
-      description: "Sahnedessert mit Vanille und Beerensauce"
-    }
-  ]
 };
