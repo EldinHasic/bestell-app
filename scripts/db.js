@@ -28,21 +28,25 @@ let MyMenu = {
 
   "Pizza": [
     {
+      "image": "./assets/img/pizza-margherita.jpg",
       "name": "Pizza Margherita",
       "price": 11.90,
       "ingredients": "Tomato Sauce, Mozzarella"
     },
     {
+      "image": "./assets/img/pizza-chorizo.jpg",
       "name": "Pizza Chorizo",
       "price": 13.90,
       "ingredients": "Tomato slices, Mozzarella, Chorizo"
     },
     {
+      "image": "./assets/img/pizza-funghi.jpg",
       "name": "Funghi",
       "price": 12.90,
       "ingredients": "Red onion, Olives, Button Mushrooms, Mozzarella"
     },
     {
+      "image": "./assets/img/pizza-quattro-formaggi.jpg",
       "name": "Quattro Formaggi with Chicken",
       "price": 15.90,
       "ingredients": "Chicken, Mozzarella, Gorgonzola, Fontina, Parmigiano Reggiano"
