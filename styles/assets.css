@@ -6,9 +6,11 @@
 
 .burgerLogo {
     border-radius: 100%;
+    border: 12px solid #FDEADC;
     height: 200px;
     width: 200px;
-    padding: 24px;
+    position: absolute;
+    top: 350px;
 }
 
 /*Dish Container*/
