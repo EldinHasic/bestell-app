@@ -1,6 +1,6 @@
 @font-face {
-    font-family: 'raleway';
-    src: url('/assets/fonts/PalanquinDark-Regular.ttf') format('truetype');
+   font-family: 'raleway';
+   src: url('/assets/fonts/PalanquinDark-Regular.ttf') format('truetype');
 }
 
 body {
@@ -16,18 +16,13 @@ main {
    flex: 1;
 }
 
-h1 {
-  
-   padding: 12px;
-}
-
 h2 {
-    color: #363534;
-    font-size: 36px;
+   color: #363534;
+   font-size: 36px;
 }
 
 h3 {
-margin: 0;
+   margin: 0;
 }
 
 p {
@@ -66,6 +61,21 @@ header {
 }
 
 .MenuHeading {
-    background-color: #E76C1F;
-    margin-bottom: 36px;
+   position: relative;
+   background-color: #E76C1F;
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   gap: 16px;
+   margin-bottom: 36px;
+   padding: 12px 0 12px 64px;
+
+}
+
+.dishIcon {
+   height: 64px;
+   width: 64px;
+   position: absolute;
+   left: 12px;
+   bottom: 0;
 }

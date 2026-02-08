@@ -11,7 +11,7 @@
     <script src="./scripts/template.js" defer></script>
 </head>
 
-<body>
+<body onload="renderBurgerDishes()">
     <main>
         <header>
             <nav class="contentLimit mainHeader">
@@ -30,28 +30,18 @@
         </section>
 
         <section id="burgerMenu">
-            <div class="MenuHeading">
-                <h1 class="contentLimit">Burger & Sandwiches</h1>
-            </div>
-        </section>
-
-        <div class="contentLimit dishContainer">
-            <div>
-                <img class="dish-img" src="/assets/img/veggie-burger.jpg" alt="">
-            </div>
-            <div>
-                <div class="dishTitleAndPrice">
-                    <h3>Veggie mushroom black burger</h3>
-                    <p>16,90€</p>
+            <article class="MenuHeading">
+                <div>
+                    <img class="dishIcon" src="/assets/img/burger-icon.svg" alt="">
                 </div>
                 <div>
-                    <p class="ingredients">Mixed green salad, Tomatoes, Edamame, Mushrooms</p>
+                    <h1 class="contentLimit">Burger</h1>
                 </div>
-                <div class="addToBasketButtons">
-                    <img src="./assets/img/added-button.svg" alt="">
-                    <img src="./assets/img/add-dish-button.svg" alt="">
-                </div>
-            </div>
+            </article>
+      
+
+        <div class="contentLimit">
+
         </div>
     </main>
 
