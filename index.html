@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/assets.css">
+    <link rel="stylesheet" href="./styles/basket.css">
     <script src="./scripts/db.js" defer></script>
     <script src="./scripts/template.js" defer></script>
 </head>
@@ -30,28 +31,42 @@
             <h2>The best of Burgers, Pizza and Greens, all in one great place.</h2>
         </section>
 
+        <div class="contentLimit content_wrapper">
+            <section class="content">
 
-        <article class="MenuHeading">
-            <div>
-                <img class="dishIcon" src="/assets/img/burger-icon.svg" alt="burger-icon">
-            </div>
-            <div>
-                <h1 class="contentLimit">Burger</h1>
-            </div>
-        </article>
+                <article class="MenuHeading">
+                    <div>
+                        <img class="dishIcon" src="/assets/img/burger-icon.svg" alt="burger-icon">
+                    </div>
+                    <div>
+                        <h1 class="contentLimit">Burger</h1>
+                    </div>
+                </article>
 
-        <section id="burgerMenu"></section>
+                <section id="burgerMenu"></section>
 
-        <article class="MenuHeading">
-            <div>
-                <img class="dishIcon" src="/assets/img/pizza-icon.svg" alt="pizza-icon">
-            </div>
-            <div>
-                <h1 class="contentLimit">Pizza (30cm)</h1>
-            </div>
-        </article>
+                <article class="MenuHeading">
+                    <div>
+                        <img class="dishIcon" src="/assets/img/pizza-icon.svg" alt="pizza-icon">
+                    </div>
+                    <div>
+                        <h1 class="contentLimit">Pizza (30cm)</h1>
+                    </div>
+                </article>
 
-        <section id="PizzaMenu"></section>
+                <section id="PizzaMenu"></section>
+
+            </section>
+
+            <section class="basket_wrapper">
+
+                <div class="basket_content">
+                    <h2>Your Basket</h2>
+                </div>
+
+            </section>
+        </div>
+
     </main>
 
 </body>

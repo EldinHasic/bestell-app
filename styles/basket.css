@@ -1,0 +1,28 @@
+.content_wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
+    flex-grow: 1;
+}
+
+.content {
+    width: calc(100% - 300px);
+
+}
+
+.basket_wrapper {
+    width: 300px;
+    padding: 16px;
+    flex-grow: 1;
+    display: flex;
+}
+
+.basket_content {
+    width: 100%;
+    flex-grow: 1;
+    position: sticky;
+    top: 0;
+    background-color: blue;
+    height: 400px;
+    text-align: center;
+}
