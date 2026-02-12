@@ -17,6 +17,11 @@ function renderPizzaDishes() {
     }
 }
 
+function addDishToBasket(BurgerIndex) {
+    let BasketSectionRef = document.getElementById("basketDish");
+    BasketSectionRef.innerHTML += getDishBasketHTML(BurgerIndex);
+}
+
 function getBurgerHTML(BurgerIndex) {
     return `<div class=" contentLimit dishContainer">
     <div>
@@ -33,7 +38,7 @@ function getBurgerHTML(BurgerIndex) {
         </div>
         <div class="addToBasketButtons">
             <img src="./assets/img/added-button.svg" alt="">
-            <img src="./assets/img/add-dish-button.svg" alt="">
+            <img onclick="addDishToBasket(${BurgerIndex})"src="./assets/img/add-dish-button.svg" alt="">
         </div>
     </div>
 </div>`
@@ -60,4 +65,25 @@ function getPizzaHTML(PizzaIndex) {
         </div>
     </div>
 </div>`
+}
+
+function getDishBasketHTML(BurgerIndex) {
+     return `<section class="basket_dish_container">
+            <div class="basket_dish_title">
+                 <p>1 x ${MyMenu.Burger[BurgerIndex].name}</p>
+            </div>
+
+            <article class="basket_nav_bar">
+                <div class="basket_interaction">
+                    <div>
+                        <img src="./assets/img/delete.svg" alt="trash-icon">
+                    </div>
+                 <div>1</div>
+                    <div>
+                        <img src="./assets/img/+.svg" alt="">
+                    </div>
+                </div>
+                    <div>${MyMenu.Burger[BurgerIndex].price.toFixed(2)}€</div>
+            </article>
+     </section>`
 }
