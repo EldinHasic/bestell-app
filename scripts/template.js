@@ -25,7 +25,7 @@ function getBurgerHTML(BurgerIndex) {
 
     <div class="dishInfo">
         <div class="dishTitleAndPrice">
-            <h3>${MyMenu.Burger[BurgerIndex].name}</h3>
+            <h2>${MyMenu.Burger[BurgerIndex].name}</h2>
             <p>${MyMenu.Burger[BurgerIndex].price.toFixed(2)}€</p>
         </div>
         <div>

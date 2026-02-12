@@ -18,11 +18,37 @@
 }
 
 .basket_content {
-    width: 100%;
-    flex-grow: 1;
+    background-color: #363534;
+    font-weight: bold;
     position: sticky;
+    flex-grow: 1;
+    width: 100%;
     top: 0;
-    background-color: blue;
     height: 400px;
     text-align: center;
+    padding: 12px;
+}
+
+.basket_dish_container {
+    color: #363534;
+    display: flex;
+    flex-direction: column;
+    background-color: #FDEADC;
+    border-radius: 8px;
+    padding: 12px;
+}
+
+.basket_dish_title {
+    text-align: left;
+}
+
+.basket_nav_bar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.basket_interaction {
+    display: flex;
+    gap: 4px;
 }
