@@ -1,89 +1,63 @@
 function init() {
-    renderBurgerDishes();
-    renderPizzaDishes();
+    renderDishes();
+    renderBasket();
 }
 
-function renderBurgerDishes() {
+function renderDishes() {
     let BurgerSectionRef = document.getElementById("burgerMenu");
-    for (let BurgerIndex = 0; BurgerIndex < MyMenu.Burger.length; BurgerIndex++) {
-        BurgerSectionRef.innerHTML += getBurgerHTML(BurgerIndex);
-    }
-}
-
-function renderPizzaDishes() {
     let PizzaSectionRef = document.getElementById("PizzaMenu");
-    for (let PizzaIndex = 0; PizzaIndex < MyMenu.Burger.length; PizzaIndex++) {
-        PizzaSectionRef.innerHTML += getPizzaHTML(PizzaIndex);
+    for (let MenuIndex = 0; MenuIndex < MyMenu.length; MenuIndex++) {
+        if (MyMenu[MenuIndex].category === "Burger") {
+            BurgerSectionRef.innerHTML += getBurgerHTML(MenuIndex);
+        }
+        else if (MyMenu[MenuIndex].category === "Pizza") {
+            PizzaSectionRef.innerHTML += getPizzaHTML(MenuIndex);
+        }
     }
 }
 
-function addDishToBasket(BurgerIndex) {
-    let BasketSectionRef = document.getElementById("basketDish");
-    BasketSectionRef.innerHTML += getDishBasketHTML(BurgerIndex);
-}
-
-function getBurgerHTML(BurgerIndex) {
+function getBurgerHTML(MenuIndex) {
     return `<div class=" contentLimit dishContainer">
     <div>
-        <img class="dish-img" src="${MyMenu.Burger[BurgerIndex].image}" alt="">
+        <img class="dish-img" src="${MyMenu[MenuIndex].image}" alt="">
     </div>
 
     <div class="dishInfo">
         <div class="dishTitleAndPrice">
-            <h2>${MyMenu.Burger[BurgerIndex].name}</h2>
-            <p>${MyMenu.Burger[BurgerIndex].price.toFixed(2)}€</p>
+            <h2>${MyMenu[MenuIndex].name}</h2>
+            <p>${MyMenu[MenuIndex].price.toFixed(2)}€</p>
         </div>
         <div>
-            <p>${MyMenu.Burger[BurgerIndex].ingredients}</p>
+            <p>${MyMenu[MenuIndex].ingredients}</p>
         </div>
         <div class="addToBasketButtons">
             <img src="./assets/img/added-button.svg" alt="">
-            <img onclick="addDishToBasket(${BurgerIndex})"src="./assets/img/add-dish-button.svg" alt="">
+            <img onclick="addDishToBasket(${MenuIndex})"src="./assets/img/add-dish-button.svg" alt="">
         </div>
     </div>
 </div>`
 }
 
 
-function getPizzaHTML(PizzaIndex) {
+function getPizzaHTML(MenuIndex) {
     return `<div class=" contentLimit dishContainer">
     <div>
-        <img class="dish-img" src="${MyMenu.Pizza[PizzaIndex].image}" alt="">
+        <img class="dish-img" src="${MyMenu[MenuIndex   ].image}" alt="">
     </div>
 
     <div class="dishInfo">
         <div class="dishTitleAndPrice">
-            <h3>${MyMenu.Pizza[PizzaIndex].name}</h3>
-            <p>${MyMenu.Pizza[PizzaIndex].price.toFixed(2)}€</p>
+            <h3>${MyMenu[MenuIndex].name}</h3>
+            <p>${MyMenu[MenuIndex].price.toFixed(2)}€</p>
         </div>
         <div>
-            <p>${MyMenu.Pizza[PizzaIndex].ingredients}</p>
+            <p>${MyMenu[MenuIndex].ingredients}</p>
         </div>
         <div class="addToBasketButtons">
             <img src="./assets/img/added-button.svg" alt="">
-            <img src="./assets/img/add-dish-button.svg" alt="">
+            <img onclick="addDishToBasket(${MenuIndex})" src="./assets/img/add-dish-button.svg" alt="">
         </div>
     </div>
 </div>`
 }
 
-function getDishBasketHTML(BurgerIndex) {
-     return `<section class="basket_dish_container">
-            <div class="basket_dish_title">
-                 <p>1 x ${MyMenu.Burger[BurgerIndex].name}</p>
-            </div>
-
-            <article class="basket_nav_bar">
-                <div class="basket_interaction">
-                    <div>
-                        <img src="./assets/img/delete.svg" alt="trash-icon">
-                    </div>
-                 <div>1</div>
-                    <div>
-                        <img src="./assets/img/+.svg" alt="">
-                    </div>
-                </div>
-                    <div>${MyMenu.Burger[BurgerIndex].price.toFixed(2)}€</div>
-            </article>
-     </section>`
-}
