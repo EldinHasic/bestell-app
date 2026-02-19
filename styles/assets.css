@@ -49,7 +49,7 @@
     font-size: 24x;
 }
 
-.addToBasketButtons {
+.addToBasketButton {
     display: flex;
     justify-content: flex-end;
     gap: 12px;

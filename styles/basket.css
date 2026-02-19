@@ -11,7 +11,6 @@
 
 .basket_wrapper {
     width: 300px;
-    flex-grow: 1;
     display: flex;
 }
 
@@ -21,7 +20,7 @@
     position: sticky;
     flex-grow: 1;
     width: 100%;
-    max-height: fit-content;
+    height: 800px;
     top: 0;
     text-align: center;
     padding: 12px;
@@ -52,4 +51,26 @@
     display: flex;
     align-items: center;
     gap: 4px;
+}
+
+.subTotal {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    margin-top: 12px;
+}
+
+.deliveryFee {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    margin-top: 12px;
+}
+
+.totalPrice {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    margin-top: 12px;
+    font-weight: bold;
 }

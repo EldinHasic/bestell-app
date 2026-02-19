@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./styles/basket.css">
     <script src="./scripts/db.js" defer></script>
     <script src="./scripts/template.js" defer></script>
-    <script src="./scripts/basket.js" defer></script>
+    <script src="./scripts/script.js" defer></script>
 </head>
 
 <body onload="init()">
@@ -62,9 +62,20 @@
             <section class="basket_wrapper">
                 <div class="basket_content">
                     <h1>Your Basket</h1>
+
                     <div id="basketDish">
+                        <article>
+                            <p>
+                                <span>Nothing here yet.</span>
+                                <span>Go ahead and choose something delicious!</span>
+                            </p>
+                            <img src="/assets/img/basket.svg" alt="">
+                        </article>
 
                     </div>
+                    <aside id="order-price">
+
+                    </aside>
                 </div>
             </section>
         </div>

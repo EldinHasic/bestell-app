@@ -1,20 +1,3 @@
-function init() {
-    renderDishes();
-    renderBasket();
-}
-
-function renderDishes() {
-    let BurgerSectionRef = document.getElementById("burgerMenu");
-    let PizzaSectionRef = document.getElementById("PizzaMenu");
-    for (let MenuIndex = 0; MenuIndex < MyMenu.length; MenuIndex++) {
-        if (MyMenu[MenuIndex].category === "Burger") {
-            BurgerSectionRef.innerHTML += getBurgerHTML(MenuIndex);
-        }
-        else if (MyMenu[MenuIndex].category === "Pizza") {
-            PizzaSectionRef.innerHTML += getPizzaHTML(MenuIndex);
-        }
-    }
-}
 
 function getBurgerHTML(MenuIndex) {
     return `<div class=" contentLimit dishContainer">
@@ -30,9 +13,8 @@ function getBurgerHTML(MenuIndex) {
         <div>
             <p>${MyMenu[MenuIndex].ingredients}</p>
         </div>
-        <div class="addToBasketButtons">
-            <img src="./assets/img/added-button.svg" alt="">
-            <img onclick="addDishToBasket(${MenuIndex})"src="./assets/img/add-dish-button.svg" alt="">
+        <div class="addToBasketButton">
+            <img onclick="addDishToBasket(${MenuIndex})" src="./assets/img/add-dish-button.svg" onmouseover="this.src='./assets/img/add-dish-button-hover.svg';" onmouseout="this.src='./assets/img/add-dish-button.svg';" alt="add-dish-to-basket-button">
         </div>
     </div>
 </div>`
@@ -42,7 +24,7 @@ function getBurgerHTML(MenuIndex) {
 function getPizzaHTML(MenuIndex) {
     return `<div class=" contentLimit dishContainer">
     <div>
-        <img class="dish-img" src="${MyMenu[MenuIndex   ].image}" alt="">
+        <img class="dish-img" src="${MyMenu[MenuIndex].image}" alt="">
     </div>
 
     <div class="dishInfo">
@@ -53,11 +35,50 @@ function getPizzaHTML(MenuIndex) {
         <div>
             <p>${MyMenu[MenuIndex].ingredients}</p>
         </div>
-        <div class="addToBasketButtons">
-            <img src="./assets/img/added-button.svg" alt="">
-            <img onclick="addDishToBasket(${MenuIndex})" src="./assets/img/add-dish-button.svg" alt="">
+        <div class="addToBasketButton">
+            <img onclick="addDishToBasket(${MenuIndex})" src="./assets/img/add-dish-button.svg" onmouseover="this.src='./assets/img/add-dish-button-hover.svg';" onmouseout="this.src='./assets/img/add-dish-button.svg';" alt="add-dish-to-basket-button">
         </div>
     </div>
 </div>`
 }
 
+function getDishBasketHTML(BasketIndex) {
+    return `<section class="basket_dish_container">
+            <div class="basket_dish_title">
+                 <p>${basket[BasketIndex].name}</p>
+            </div>
+
+            <article class="basket_nav_bar">
+                <div class="basket_interaction">
+                    <div>
+                        <img onclick="decreaseOrDeleteDishFromBasket(${BasketIndex})" src="./assets/img/delete.svg" alt="trash-icon">
+                    </div>
+                    <div>
+                        <p>${basket[BasketIndex].amount}</p>
+                    </div>
+                    <div>
+                        <img onclick="increaseDishAmount(${BasketIndex})" src="./assets/img/+.svg" alt="">
+                    </div>
+                </div>
+                    <div>${basket[BasketIndex].price.toFixed(2)}€</div>
+            </article>
+     </section>`
+}
+
+function getBasketPriceTemplate(subTotal, totalPrice, deliveryFee) {
+    return `<div class="price_calculation">
+                            <article class="subTotal">
+                                <div>Subtotal</div>
+                                <div>${subTotal.toFixed(2)}€</div>
+                            </article>
+                            <article class="deliveryFee">
+                                <div>Delivery Fee</div>
+                                <div>${deliveryFee.toFixed(2)}€</div>
+                            </article>
+                            <hr>
+                            <article class="totalPrice">
+                                <div>Total</div>
+                                <div>${totalPrice.toFixed(2)}€</div>
+                            </article>
+                        </div>`
+}
